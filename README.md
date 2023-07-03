@@ -1,5 +1,5 @@
 # Acoustic Identification of Wood-Boring Insects with TinyML
-This repository contains the code developed for my Master's Thesis at Politecnico di Milano under the supervision of Prof. Manuel Roveri
+This repository contains the code developed for my Master's Thesis at Politecnico di Milano under the supervision of Prof. Manuel Roveri.
 The work is a joint collaboration with a team of professors and researchers from Northern Arizona University guided by Prof. Paul G. Flikkema.
 
 The goal of the thesis is to enable the execution of detection (or binary classification) and multi-class classification of insect sounds in trees on highly constrained embedded devices. 
