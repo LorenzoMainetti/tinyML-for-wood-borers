@@ -1,4 +1,11 @@
 # Acoustic Identification of Wood-Boring Insects with TinyML
+This repository contains the code developed for my Master's Thesis at Politecnico di Milano under the supervision of Prof. Manuel Roveri
+The work is a joint collaboration with a team of professors and researchers from Northern Arizona University guided by Prof. Paul G. Flikkema.
+
+The goal of the thesis is to enable the execution of detection (or binary classification) and multi-class classification of insect sounds in trees on highly constrained embedded devices. 
+In a real application, a piezoelectric sensor will collect signals in real-time from the tree according to a certain duty cycle. After preamplification and analog-to-digital conversion, the digital audio signal will be fed to the embedded device as a stream of discrete data. The embedded device will chunk the stream in frames, it will process the frames one by one and output a prediction.
+
+## Abstract
 As the climate warms, wood-boring insects proliferate and expand into new habitats, threatening forest ecosystems worldwide. This thesis tackles the challenge of infestation prevention through an innovative and efficient method of on-device acoustic monitoring using the principles of TinyML. 
 Two key solutions are proposed to work around the constraints of memory, computation, and power consumption on embedded devices. 
 - The primary solution introduces **MAINet** (Multi-task Audio Insect Net) a multi-task convolutional neural network utilizing 1D convolutions and quantization mechanisms to process raw audio data, identify and categorize insect species. 
@@ -34,3 +41,11 @@ The cascade approach rationale lies in reducing energy consumption by building a
 In more detail, the proposed TinyInsectNet for wood-boring insects classification comprises two main phases:
 - the convolutional phase comprises a sequence of $K$ 2D convolutional blocks. Each block is organized into a convolutional layer (characterized by a number $f$ of $r \times r$ square filters) to extract the main features of the audio, a ReLU activation function, and a Max Pooling layer, used to reduce the dimension of the activation map;
 - the classification phase comprises a dropout layer (with dropout rate = 0.15), a flattening layer, and a classification dense layer with Softmax activation. The dense layer computes a probability value for each class; the class with a higher probability is then chosen as the output.
+
+## Structure of the Repository
+The repository is divided into the following folders:
+- [Pipeline](https://github.com/LorenzoMainetti/tinyML-for-wood-borers/tree/main/Pipeline): contains all the relevant **Python** code for the various blocks of the two proposed architectures, for the evaluation, and for the synthetic data generation.
+- [Experiments](https://github.com/LorenzoMainetti/tinyML-for-wood-borers/tree/main/Experiments): **Jupyter Notebooks** for testing, evaluating, and comparing algorithms and architectures.
+- [Serial Server](https://github.com/LorenzoMainetti/tinyML-for-wood-borers/tree/main/Serial%20Server): **Python** code for setting up a UART serial server using PySerial library to communicate with the STM board, plus the demos for the two proposed solutions.
+- [Deployment](https://github.com/LorenzoMainetti/tinyML-for-wood-borers/tree/main/Deployment): contains the **C** code to port both the solutions on the target embedded device.
+- [Images](https://github.com/LorenzoMainetti/tinyML-for-wood-borers/tree/main/Images): support folder for images.
