@@ -5,6 +5,8 @@ The work is a joint collaboration with a team of professors and researchers from
 The goal of the thesis is to enable the execution of detection (or binary classification) and multi-class classification of insect sounds in trees on highly constrained embedded devices. 
 In a real application, a piezoelectric sensor will collect signals in real-time from the tree according to a certain duty cycle. After preamplification and analog-to-digital conversion, the digital audio signal will be fed to the embedded device as a stream of discrete data. The embedded device will chunk the stream in frames, it will process the frames one by one and output a prediction.
 
+To learn more about the research check out the [Executive Summary](https://github.com/LorenzoMainetti/tinyML-for-wood-borers/tree/main/Executive_Summary.pdf).
+
 ## Abstract
 As the climate warms, wood-boring insects proliferate and expand into new habitats, threatening forest ecosystems worldwide. This thesis tackles the challenge of infestation prevention through an innovative and efficient method of on-device acoustic monitoring using the principles of TinyML. 
 Two key solutions are proposed to work around the constraints of memory, computation, and power consumption on embedded devices. 
